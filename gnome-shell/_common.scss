@@ -3,7 +3,6 @@ $corner-radius: 2px;
 
 /* GLOBALS */
 $font-size: 10;
-$font-family: Roboto,Ubuntu, Cantarell, Sans-Serif;
 $_bubble_bg_color: $osd_bg_color;
 $_bubble_fg_color: $fg_color;
 $_bubble_borders_color: $fg_color;
@@ -11,7 +10,6 @@ $_bubble_transparent: transparentize($osd_bg_color, 0.17);
 $topbar_bg_color: transparentize($dracula, 0.05);
 
 stage {
-  font-family: $font-family;
   @include fontsize($font-size);
   color: $fg_color;
 }
@@ -973,6 +971,10 @@ StScrollBar {
       font-weight: bold;
     }
 
+    .events-button .event-time {
+      color: darken($fg_color, 4%);
+    }
+
     .world-clocks-grid {
       spacing-rows: 0.4em;
     }
@@ -997,14 +999,19 @@ StScrollBar {
       &:active { background-color: transparentize($bg_color,0.95); }
     }
 
-      .calendar-change-month-back { //arrow back
-        background-image: url("assets/calendar-arrow-left.svg");
-        &:rtl { background-image: url("assets/calendar-arrow-right.svg"); }
-      }
-      .calendar-change-month-forward { //arrow foreward
-        background-image: url("assets/calendar-arrow-right.svg");
-        &:rtl { background-image: url("assets/calendar-arrow-left.svg"); }
-      }
+    .calendar-change-month-back { //arrow back
+      background-image: url("assets/calendar-arrow-left.svg");
+      &:rtl { background-image: url("assets/calendar-arrow-right.svg"); }
+    }
+    .calendar-change-month-forward { //arrow foreward
+      background-image: url("assets/calendar-arrow-right.svg");
+      &:rtl { background-image: url("assets/calendar-arrow-left.svg"); }
+    }
+
+    .calendar-change-month-back StIcon,
+    .calendar-change-month-forward StIcon {
+      color: darken($fg_color, 5%);
+    }
 
     .calendar-day-base {
       font-size: 80%;
@@ -1408,12 +1415,11 @@ StScrollBar {
     width: 320px;
     padding: 9px;
     border-radius: 100px;
-    border: none;
+    border: 1px solid $borders_color;
     color: $fg_color;
     background-color: transparentize($bg_color, 0.4);
     box-shadow: $depth;
     &:focus {
-      border-width: 0;
       color: $fg_color;
       background-color: transparentize($bg_color, 0.2);
       box-shadow: $depth2;
@@ -1423,6 +1429,7 @@ StScrollBar {
 
     &:hover, &:focus {
       background-color: transparentize($bg_color, 0.2);
+      border-color: transparentize($selected_bg_color, 0.2);
       .search-entry-icon { color: $fg_color; }
     }
   }
