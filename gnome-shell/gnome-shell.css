@@ -1242,6 +1242,9 @@ StScrollBar {
 #overview.cosmic-solid-bg {
   background-color: rgba(40, 42, 54, 0.95) !important; } /* #282a36 */
 
+#overviewGroup {
+  background-color: rgba(40, 42, 54, 0.95); }
+
 .overview-controls {
   padding-bottom: 32px; }
 
