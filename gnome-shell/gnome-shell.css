@@ -110,6 +110,8 @@ StEntry {
     icon-size: 16px;
     warning-color: #ff9f39;
     padding: 0 4px; }
+  StEntry StLabel.hint-text {
+    color: rgba(195, 199, 209, 0.7); }
 
 /* Scrollbars */
 StScrollView.vfade {
@@ -498,7 +500,9 @@ StScrollBar {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2); }
   .popup-menu .popup-menu-content {
-    padding: 16px 0; }
+    padding: 16px 0;
+    background-color: #282a36;
+    border-radius: 7px; }
   .popup-menu .popup-menu-item {
     spacing: 6px;
     padding: 6px; }
@@ -660,7 +664,10 @@ StScrollBar {
   padding: 0px;
   spacing: 8px; }
 
-.ws-switcher-active-up, .ws-switcher-active-down {
+.ws-switcher-active-up,
+.ws-switcher-active-down,
+.ws-switcher-active-left,
+.ws-switcher-active-right {
   height: 50px;
   background-color: rgba(189, 147, 249, 0.5);
   color: #f8f8f2;

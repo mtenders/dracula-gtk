@@ -74,6 +74,9 @@ StEntry {
     warning-color: $warning_color;
     padding: 0 4px;
   }
+
+  StLabel.hint-text { color: transparentize($fg_color, 0.3); }
+
 }
 
 
@@ -525,7 +528,11 @@ StScrollBar {
     box-shadow: $depth6;
   }
 
-  .popup-menu-content { padding: 16px 0; }
+  .popup-menu-content {
+    padding: 16px 0; 
+    background-color: $bg_color;
+    border-radius: 7px;
+  }
   .popup-menu-item {
     spacing: 6px;
     padding: 6px;
@@ -720,7 +727,10 @@ StScrollBar {
     spacing: 8px;
   }
 
-  .ws-switcher-active-up, .ws-switcher-active-down {
+  .ws-switcher-active-up,
+  .ws-switcher-active-down,
+  .ws-switcher-active-left,
+  .ws-switcher-active-right {
     height: 50px;
     background-color: $selected_bg_color;
     color: $selected_fg_color;
