@@ -1327,7 +1327,7 @@ StScrollBar {
 
 /* DASHBOARD */
 .dash-background {
-  background-color: #1d1f27; }
+  background-color: transparent; }/* #1d1f27; } */
 
 .dash-separator {
   width: 1px;
